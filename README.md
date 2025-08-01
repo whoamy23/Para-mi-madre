@@ -1,35 +1,37 @@
-Descripción de uso para la página web de dedicatoria
-Esta página web es una dedicatoria interactiva y personalizada para regalar a una persona especial (como mamá). Permite ingresar el nombre del destinatario directamente en la URL para que aparezca personalizado en los mensajes.
+Instrucciones para usar la página web de dedicatoria
+Link base:
+https://whoamy23.github.io/Para-mi-madre/
 
-Cómo usar la página
-Abrir la página web:
-Accede a la dirección web donde está alojada la página (por ejemplo:
-https://TU_USUARIO.github.io/mi-dedicatoria/).
+Cómo usarla
+Abre la página web:
+Ingresa a
+https://whoamy23.github.io/Para-mi-madre/
 
-Personalizar con nombre:
-Para dedicar la página a alguien en específico, añade el parámetro para con el nombre al final de la URL, por ejemplo:
+Personaliza con el nombre:
+Para que la dedicatoria muestre el nombre de la persona a quien va dedicada, agrega el parámetro para con el nombre en la URL. Por ejemplo:
+
+https://whoamy23.github.io/Para-mi-madre/?para=mami
+Esto hará que el nombre "Paola" aparezca en el título y dentro de las frases.
+
+Lee las frases:
+Al cargar la página, verás mensajes personalizados con frases divertidas, motivacionales y de disculpa para tu mamá (o la persona que elijas).
+
+Navega las frases:
+Usa el botón “Siguiente” para pasar a la siguiente frase hasta terminar todas las dedicatorias.
+
+Disfruta la experiencia:
+Mientras lees, verás una lluvia animada de flores rosas cayendo suavemente alrededor del recuadro y una decoración artística con una grieta en el borde inferior.
+
+Para compartir
+Copia la URL personalizada (con el nombre en para=) y compártela por redes sociales, correo o mensaje.
+
+La persona que abra ese enlace verá la dedicatoria con su nombre.
+
+Nota
+Puedes cambiar el nombre en la URL a cualquier otro, por ejemplo:
 
 
-https://TU_USUARIO.github.io/mi-dedicatoria/?para=Paola
-Esto hará que el nombre “Paola” aparezca en el título y dentro de las frases de la dedicatoria.
+https://whoamy23.github.io/Para-mi-madre/?para=Ana
+Para nombres con espacios, reemplaza los espacios con %20, por ejemplo:
 
-Leer las frases:
-Al cargar la página, aparecerá un mensaje personalizado con frases divertidas, motivacionales y de disculpa para la persona a la que va dedicada la página.
-
-Navegar por las frases:
-Haz clic en el botón “Siguiente” para pasar a la siguiente frase hasta terminar el recorrido.
-
-Disfrutar la experiencia:
-Mientras lees las frases, podrás ver una lluvia animada de flores rosas que caen suavemente alrededor del recuadro con las frases, además de una grieta decorativa en el borde inferior que aporta un toque artístico.
-
-Para compartir la dedicatoria
-Copia y pega la URL personalizada con el nombre del destinatario (como se indica en el punto 2) y envíala por mensaje, correo o redes sociales.
-
-Al abrir el enlace, la persona verá la dedicatoria con su nombre y todas las frases especiales.
-
-Personalización
-El nombre se obtiene directamente de la URL, por lo que puedes cambiarlo simplemente modificando el parámetro para.
-
-Puedes añadir cualquier nombre (sin espacios, o usando %20 para espacios) para personalizar la dedicatoria a quien quieras.
-
-Si tienes dudas o quieres agregar más frases o estilos, puedes modificar directamente el código fuente.
+https://whoamy23.github.io/Para-mi-madre/?para=Maria%20Elena
