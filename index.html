@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dedicatoria para Mamá con Lluvia de Flores</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #ffe3b3, #ffb347);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a3f35;
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  .container {
+    position: relative;
+    background: white;
+    max-width: 480px;
+    width: 90%;
+    padding: 2.5rem 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    text-align: center;
+    z-index: 10;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+    color: #b85c38;
+  }
+
+  .phrase-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1.8rem 2rem;
+    border: 3px solid #b85c38;
+    border-radius: 25px;
+    background: #fff5e6;
+    box-shadow: inset 0 0 12px #f7d9b8;
+    min-height: 130px;
+    z-index: 11;
+  }
+
+  /* Flores decorativas en las esquinas */
+  .flower {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #f08c00;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow:
+      12px 0 #f08c00,
+      6px 10px #f08c00,
+      -6px 10px #f08c00,
+      -12px 0 #f08c00,
+      -6px -10px #f08c00,
+      6px -10px #f08c00;
+    animation: flower-rotate 10s linear infinite;
+    z-index: 12;
+  }
+  .flower:nth-child(1) { top: -15px; left: -15px; animation-delay: 0s; }
+  .flower:nth-child(2) { top: -15px; right: -15px; animation-delay: 3s; }
+  .flower:nth-child(3) { bottom: -15px; left: -15px; animation-delay: 6s; }
+  .flower:nth-child(4) { bottom: -15px; right: -15px; animation-delay: 9s; }
+
+  @keyframes flower-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .phrase {
+    font-size: 1.4rem;
+    color: #634832;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    overflow: visible;
+    border-right: 3px solid #b85c38;
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    z-index: 13;
+  }
+  .typing {
+    border-right: 3px solid #b85c38;
+  }
+  button {
+    background-color: #b85c38;
+    color: white;
+    border: none;
+    padding: 14px 38px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(184, 92, 56, 0.6);
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 13;
+  }
+  button:disabled {
+    background-color: #d9b8a1;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  button:hover:not(:disabled) {
+    background-color: #d87e3a;
+  }
+
+  /* Lluvia de flores rosa */
+  .falling-flower {
+    position: fixed;
+    top: -30px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at center, #ff9acf 30%, #e94094 70%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow:
+      10px 0 #e94094,
+      5px 8px #e94094,
+      -5px 8px #e94094,
+      -10px 0 #e94094,
+      -5px -8px #e94094,
+      5px -8px #e94094;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(calc(100vh - 60px)) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Piso donde se acumulan flores */
+  #floor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    pointer-events: none;
+    z-index: 6;
+    overflow: visible;
+  }
+
+  /* Grieta en el piso */
+  #crack {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 200px;
+    height: 20px;
+    margin-left: -100px;
+    background: linear-gradient(135deg, #330000, #660000);
+    border-radius: 10px 10px 0 0;
+    box-shadow:
+      0 3px 5px 0 rgba(0,0,0,0.7),
+      inset 0 -5px 15px 2px #990000;
+    clip-path: polygon(
+      0 0,
+      10% 40%,
+      20% 10%,
+      30% 50%,
+      40% 20%,
+      50% 55%,
+      60% 15%,
+      70% 45%,
+      80% 20%,
+      90% 40%,
+      100% 0,
+      100% 100%,
+      0 100%
+    );
+    animation: crackPulse 2s ease-in-out infinite alternate;
+    z-index: 7;
+  }
+
+  @keyframes crackPulse {
+    0% {
+      box-shadow:
+        0 3px 5px 0 rgba(0,0,0,0.7),
+        inset 0 -5px 15px 2px #990000;
+    }
+    100% {
+      box-shadow:
+        0 4px 8px 1px rgba(0,0,0,0.9),
+        inset 0 -7px 20px 3px #cc0000;
+    }
+  }
+
+  /* Flores acumuladas en el piso */
+  .accumulated-flower {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle at center, #ff9acf 30%, #e94094 70%);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow:
+      9px 0 #e94094,
+      4.5px 7px #e94094,
+      -4.5px 7px #e94094,
+      -9px 0 #e94094,
+      -4.5px -7px #e94094,
+      4.5px -7px #e94094;
+    animation: gentleFloat 3s ease-in-out infinite alternate;
+    opacity: 0.9;
+  }
+
+  @keyframes gentleFloat {
+    0% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    100% {
+      transform: translateY(-3px) rotate(5deg);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container" id="container">
+  <h1>Para ti, <span id="nameDisplay">Mamá</span></h1>
+  <div class="phrase-wrapper">
+    <div id="phrase" class="phrase"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+  </div>
+  <button id="btnNext" disabled>Siguiente</button>
+</div>
+
+<!-- Piso donde se acumulan las flores -->
+<div id="floor"></div>
+
+<!-- Grieta animada -->
+<div id="crack"></div>
+
+<script>
+  function getNameFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    let name = params.get('para');
+    if (name) {
+      name = decodeURIComponent(name);
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      return name;
+    }
+    return 'Mamá';
+  }
+
+  const frasesHumor = [
+    "Gracias por siempre estar ahí,\nincluso cuando creo que sé más que tú (que nunca es cierto). 😅",
+    "Perdona cuando no te llamo, pero sabes\nque soy un profesional en hacer que me extrañes. 😜",
+    "Sé que siempre estás vigilando,\nincluso cuando finges que estás dormida. 👀",
+    "Gracias por preparar mi comida favorita,\naunque la deje olvidada en el microondas. 🍲"
+  ];
+  const frasesMotivacion = [
+    "Eres mi mayor inspiración y motivación diaria. 🌟",
+    "Gracias por enseñarme que con esfuerzo\npuedo lograr cualquier cosa. 💪",
+    "Tu amor es la fuerza que me impulsa a seguir adelante. ❤️",
+    "Sin ti, no sería la persona que soy hoy. 🙏"
+  ];
+  const frasesDisculpa = [
+    "Perdona si a veces no te digo lo mucho que te quiero. 😔",
+    "Gracias por tu paciencia infinita con mis errores. 🧘‍♀️",
+    "Prometo esforzarme más y hacerte sentir orgullosa. 🌷",
+    "Te pido perdón por los momentos difíciles,\npero gracias por nunca rendirte conmigo. 🤗"
+  ];
+
+  let frases = [];
+  let index = 0;
+
+  const nameDisplay = document.getElementById('nameDisplay');
+  const phraseEl = document.getElementById('phrase');
+  const btnNext = document.getElementById('btnNext');
+  const container = document.getElementById('container');
+  const floor = document.getElementById('floor');
+
+  function updateNameAndPreparePhrases() {
+    const name = getNameFromURL();
+    nameDisplay.textContent = name;
+
+    frases = [...frasesHumor, ...frasesMotivacion, ...frasesDisculpa].map(frase => frase.replace(/Mamá/gi, name));
+
+    btnNext.disabled = false;
+    index = 0;
+    showPhrase(index);
+  }
+
+  function showPhrase(i) {
+    phraseEl.textContent = '';
+    let frase = frases[i];
+    let charIndex = 0;
+
+    function escribir() {
+      if (charIndex < frase.length) {
+        phraseEl.textContent += frase.charAt(charIndex);
+        charIndex++;
+        setTimeout(escribir, 40);
+      } else {
+        phraseEl.classList.remove('typing');
+      }
+    }
+    phraseEl.classList.add('typing');
+    escribir();
+  }
+
+  btnNext.addEventListener('click', () => {
+    index++;
+    if(index >= frases.length){
+      btnNext.disabled = true;
+      btnNext.textContent = "¡Gracias! ❤️";
+      return;
+    }
+    showPhrase(index);
+  });
+
+  // Variables para acumular flores
+  const acumulacionMax = 15; // máximo flores en el piso
+  let acumuladas = [];
+
+  // Crear una flor que cae y luego se acumula
+  function crearFlor() {
+    const flor = document.createElement('div');
+    flor.classList.add('falling-flower');
+
+    // Posición horizontal aleatoria dentro del ancho ventana
+    flor.style.left = Math.random() * window.innerWidth + 'px';
+
+    // Duración aleatoria para caída
+    const duracion = 4000 + Math.random() * 2000;
+    flor.style.animationDuration = duracion + 'ms';
+
+    flor.style.opacity = 0.7 + Math.random() * 0.3;
+
+    document.body.appendChild(flor);
+
+    // Cuando termine la animación la acumulamos en el piso
+    setTimeout(() => {
+      flor.remove();
+
+      if(acumuladas.length < acumulacionMax){
+        const accFlor = document.createElement('div');
+        accFlor.classList.add('accumulated-flower');
+        // Posición relativa dentro del piso
+        const posX = Math.random() * (window.innerWidth - 40);
+        accFlor.style.left = posX + 'px';
+        accFlor.style.bottom = '0px';
+        floor.appendChild(accFlor);
+        acumuladas.push(accFlor);
+      }
+    }, duracion);
+  }
+
+  // Crear flores cada 400ms aprox
+  setInterval(crearFlor, 400);
+  
+  updateNameAndPreparePhrases();
+</script>
+
+</body>
+</html>
